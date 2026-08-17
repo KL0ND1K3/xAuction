@@ -1,0 +1,20 @@
+name: xAuction
+version: ${project.version}
+main: dev.minecraft.xauction.XAuctionPlugin
+api-version: "26.2"
+folia-supported: false
+author: KL0ND1K3
+description: Серверные торги
+softdepend: [Vault, VaultUnlocked, RPG, ViaVersion]
+commands:
+  auction:
+    description: Открыть меню торгов
+    aliases: [auc, xauction]
+    usage: /auction [bid|history|yes|no|reload|next]
+    permission: xauction.use
+permissions:
+  xauction.use:
+    default: true
+  xauction.admin:
+    description: Админ-подкоманды /auction reload|next
+    default: op
